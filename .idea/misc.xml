@@ -8,15 +8,5 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (pygw2)" project-jdk-type="Python SDK" />
-  <component name="SaveActionSettings">
-    <option name="actions">
-      <set>
-        <option value="activate" />
-        <option value="organizeImports" />
-        <option value="reformat" />
-      </set>
-    </option>
-    <option name="configurationPath" value="" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Python 3.10 (3.10)" project-jdk-type="Python SDK" />
 </project>
