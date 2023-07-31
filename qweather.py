@@ -14,4 +14,5 @@ if r.status_code != 200:
 info = json.loads(r.content.decode())
 
 now = info["now"]
-push.push_deer.push_text("天气", now)
+print(now)
+# push.push_deer.push_text("天气", now)

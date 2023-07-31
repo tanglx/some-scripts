@@ -4,7 +4,8 @@ import time
 # 推送
 from pypushdeer import PushDeer
 
-push_deer = PushDeer(server="http://140.210.211.157:8800", pushkey="PDU1T32oq6sqNvZk5K7ygSQH0jQBPjwRCe2Ij")
+# push_deer = PushDeer(server="https://api2.pushdeer.com/message/push", pushkey="PDU21306TVZgy6ZzOuFS5GJbgy7kTVGOxKlE9xfjK")
+push_deer = PushDeer(pushkey="PDU21306TVZgy6ZzOuFS5GJbgy7kTVGOxKlE9xfjK")
 
 
 def push_text(title, content):

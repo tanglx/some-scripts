@@ -3,6 +3,7 @@
 # 大图中找小图所在坐标
 
 from pathlib import Path
+import matplotlib.pyplot as plt
 import numpy
 import cv2
 
@@ -84,12 +85,24 @@ def load_image_file(path):
         print(e)
 
 
+def bgr_to_rgb(cv_img):
+    pil_img = cv_img.copy()
+    pil_img[:, :, 0] = cv_img[:, :, 2]
+    pil_img[:, :, 2] = cv_img[:, :, 0]
+    return pil_img
+
+
 if __name__ == "__main__":
     img1 = load_image_file('./img.png')
     img2 = load_image_file('./idea.png')
 
     process = MatchImg(img1, img2, 0.9)
     points = process.get_img_center()
-    print(points)
+    img3 = cv2.imread('./img.png', cv2.IMREAD_UNCHANGED)
+    img3 = bgr_to_rgb(img3)
     for p in points:
-        print(p)
+        cv2.circle(img3, p, 50, (0, 0, 255), 20)
+        plt.imshow(img3)
+        plt.axis('off')  # 关闭坐标轴
+        plt.title('Img1.png')
+    plt.show()
